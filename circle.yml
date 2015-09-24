@@ -12,6 +12,9 @@ test:
     - rm -rf $CIRCLE_ARTIFACTS/org/springframework/data
     - mkdir -p $CIRCLE_ARTIFACTS/org/springframework/data
     - cp -r ${HOME}/.m2/repository/org/springframework/data/* $CIRCLE_ARTIFACTS/org/springframework/data/.
+    - rm -rf $CIRCLE_ARTIFACTS/org/springframework/boot
+    - mkdir -p $CIRCLE_ARTIFACTS/org/springframework/boot
+    - cp -r ${HOME}/.m2/repository/org/springframework/boot/* $CIRCLE_ARTIFACTS/org/springframework/boot/.
     - git -C $CIRCLE_ARTIFACTS config user.email "circleci@fabvla.com"
     - git -C $CIRCLE_ARTIFACTS config user.name "CircleCI"
     - git -C $CIRCLE_ARTIFACTS add .
